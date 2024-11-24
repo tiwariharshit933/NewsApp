@@ -1,5 +1,6 @@
 {
   "name": "newsapp",
+  "homepage": "https://tiwariharshit933.github.io/newsapp",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -19,8 +20,8 @@
     "build": "react-scripts build dotenv -e .env.development",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "build-dev": "dotenv -e .env.development react-app-rewired build",
-    "build-prod": "dotenv -e .env.production react-app-rewired build"
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build" 
   },
   "eslintConfig": {
     "extends": [
@@ -39,5 +40,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "gh-pages": "^6.2.0"
   }
 }

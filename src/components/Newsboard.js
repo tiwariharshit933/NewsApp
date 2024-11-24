@@ -5,14 +5,10 @@ const Newsboard = ({ category }) => {
 
   const [article, setArticles] = useState([])
 
-  
-  // let key_ = process.env.API_KEY
-  // console.log(key_)
-
   useEffect(() => {
 
 
-    let url = `https://newsapi.org/v2/everything?q=${category}&apiKey=${process.env.API_KEY}`;
+    let url = `https://newsapi.org/v2/everything?q=${category}&apiKey=8a2033573e99425a90f34aebddcca4b2`;
 
     fetch(url).then(response => response.json()).then(data => setArticles(data.articles))
   }, [category])
