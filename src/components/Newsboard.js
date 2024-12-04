@@ -8,7 +8,7 @@ const Newsboard = ({ category }) => {
   useEffect(() => {
 
 
-    let url = `https://newsapi.org/v2/everything?q=${category}&apiKey=8a2033573e99425a90f34aebddcca4b2`;
+    let url = `https://newsapi.org/v2/everything?q=${category}&apiKey=${PROCESS.env.api_key}`;
 
     fetch(url).then(response => response.json()).then(data => setArticles(data.articles))
   }, [category])
